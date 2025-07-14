@@ -1,26 +1,36 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 function Home() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+    
+  const handleItemClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <>
-        <div className="top-bar">
-        <h1 className="header">Natanem Couture</h1>
-        <label className="menu-toggle-label">
-          <input type="checkbox" className="menu-toggle-input" />
-          <span className="menu-toggle">☰</span>
-        </label>
-        <div className="menu">
-          <Link to="/" >
-            <button className='but'>Home</button>
-          </Link>
-          <a href="#About" >
-            <button className='but'>About</button>
-          </a>
-          <a href="#Contact" >
-            <button className='but'>Contact</button>
-          </a>
-        </div>
+    <div className="top-bar">
+      <h1 className="header">Natanem Couture</h1>
+      <label className="menu-toggle-label" onClick={() => setMenuOpen(!menuOpen)}>
+        <span className="menu-toggle">
+          {menuOpen ? '✖' : '☰'}
+        </span>
+      </label>
+      <div className={`menu ${menuOpen ? 'active' : ''}`}>
+        <Link to="/" onClick={handleItemClick}>
+          <button className='but'>Home</button>
+        </Link>
+        <a href="#About" onClick={handleItemClick}>
+          <button className='but'>About</button>
+        </a>
+        <a href="#Contact" onClick={handleItemClick}>
+          <button className='but'>Contact</button>
+        </a>
       </div>
+    </div>
     <div className="home">
         <p className="para">
           Home of elegance and style,<br /> The first haute couture <br /> hat makers in Ethiopia.
