@@ -1,5 +1,5 @@
 .home {
-  background-image: url('/Background.jpg'); /* Adjust path for Vite public folder */
+  background-image: url('/Background.jpg');
   background-position: center;
   background-size: cover;
   min-height: 100vh;
@@ -226,7 +226,7 @@
 }
 
 .footer .contact-info {
-  margin-left: 65%;
+  margin-left: 70%;
   color: white;
   font-size: 19px;
   text-shadow: black 5px 5px 6px;
@@ -236,10 +236,28 @@
   color: black;
   font-size: 19px;
   border-radius: 4px 0 0 4px;
-  height: 35px;
+  height: 40px;
   border-right: none;
   width: 300px;
   padding: 0 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.message {
+  color: black;
+  font-size: 19px;
+  border-radius: 4px 0 0 4px;
+  height: 150px;
+  border-right: none;
+  width: 300px;
+  padding: 10px 10px 0 10px;
+  border-radius: 10px;
+  margin-bottom: 10px; 
+}
+
+.message-head {
+  margin-left: 45px;
 }
 
 .email-submit {
@@ -249,9 +267,15 @@
   cursor: pointer;
   width: 100px;
   height: 37px;
-  margin: 5px;
+  margin: 30px 0;
   padding: 0 10px;
   border-radius: 0 4px 4px 0;
+}
+
+.warning {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .email-submit:hover {

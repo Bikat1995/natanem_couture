@@ -1,5 +1,4 @@
 import './App.css';
-import Menu from './Components/Menu.jsx';
 import Dashboard from './Components/Dashboard.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home.jsx';
@@ -20,7 +19,6 @@ function App() {
       } />
         <Route path="/dashboard" element={
           <>
-            <Menu />
             <Dashboard />
           </>
         } />
